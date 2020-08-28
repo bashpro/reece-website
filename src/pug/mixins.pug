@@ -1,0 +1,25 @@
+// main: ../index.pug
+mixin cards(i)
+  .cardbox
+    .profile
+      .profilepic(class= i.profile)
+    .profilename
+      p.
+        #{i.pname}
+    .profiletext
+      p.
+        #{i.description}
+        
+mixin price(i)
+  .price-box 
+    .pb-icon(class= i.icon) 
+    .pb-title
+      p.  
+        #{i.title}
+    .pb-price
+      p.
+         #{i.price}
+    .pb-description
+      p.
+         #{i.description}
+    

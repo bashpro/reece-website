@@ -1,0 +1,26 @@
+// out: ../website/index.html 
+doctype html
+html(lang="en")
+  head
+    include ./pug/head 
+     
+  body
+    //mixins
+    include ./pug/mixins
+    .container
+    
+      //navbar
+      include ./pug/nav 
+      
+      //hero section
+      include ./pug/hero 
+      
+      //About
+      include ./pug/about 
+      
+      //product
+      include ./pug/product 
+      
+      //contact
+      include ./pug/contact 
+      

@@ -1,0 +1,20 @@
+// main: ../index.pug
+.about
+  .subtitle
+    p About RunnerID
+  .abouttext
+    p.
+       RunnerID was founded by Reece Milton and co-owner Bash Ridha in the hopes of helping you
+       train at better standards. Our advice gives you a taste of how to feel better, fitter and stronger. Whether you want to start running or get ready for your next 
+       marathon, We'll be there on your journey to help you run your way to the top!
+  .subtitle
+    p Meet the team 
+    
+  .section.columns.s-medium
+    .s-box.card
+      - const reece = { profile: 'reece' , pname: 'Reece Milton' , description: 'Young runner with a level 3 sport coach certificate, ready to support people through all parts of running'}
+      +cards(reece)
+    .s-box.card
+      - const bash = { profile: 'bash' , pname: 'Bash Ridha' , description: 'Young creative with a degree in animation and a passion to create and code.'}
+      +cards(bash)
+  

@@ -1,0 +1,10 @@
+// main: ../index.pug
+.product
+  .subtitle
+    p Pricing
+  .p-holder
+    - const basic = {icon: '', title: 'basic running', price: '£80', description: 'One off running program. On day program: Pace, distance terrain and contact with the coach'}
+    +price(basic)
+    +price(basic)
+    +price(basic)
+    +price(basic)
