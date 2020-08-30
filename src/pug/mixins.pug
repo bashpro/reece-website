@@ -11,15 +11,17 @@ mixin cards(i)
         #{i.description}
         
 mixin price(i)
-  .price-box 
-    .pb-icon(class= i.icon) 
-    .pb-title
-      p.  
-        #{i.title}
-    .pb-price
-      p.
-         #{i.price}
-    .pb-description
-      p.
-         #{i.description}
+  .price-box
+    .pb-card 
+      .pb-iconholder
+        .pb-icon(id= i.icon) 
+      .pb-title
+        p.
+          #{i.title}
+      .pb-price
+        p.
+          #{i.price}
+      .pb-description
+        p.
+          #{i.description}
     

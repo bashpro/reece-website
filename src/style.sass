@@ -24,7 +24,7 @@ body::-webkit-scrollbar-thumb
   border-radius: 15px
 
 .hide
-  display: none!important
+  display: none!important 
 
 //vars
 
@@ -44,93 +44,13 @@ $mbutton: inherit
   //height: 2000px
   flex-direction: column
 
-.header
-  height: 60px
-  @include flex
-  transition: $transition
+@import ./sass/nav
 
-.title
-  flex: 1
-  @include flex
-  align-items: center
-  //justify-content: center
-  p
-    font-size: 20px
-    letter-spacing: 5px
-    padding-left: 10px
-    user-select: none
-    font-family: 'Open Sans'
-    transition: all 0.2s ease
+@import ./sass/hero
 
-.menu
-  width: 300px!important
-  height: 60px
-  transition: $transition
-  @include flex
-  .menubutton
-    display: none
-    width: auto
-    height: $mbutton
-    img
-      width: auto
-      height: $mbutton
+@import ./sass/about
 
-.mbutton
-  @include flex
-  height: 60px
-  width: inherit
-
-.mb
-  @include flex
-  flex: 1
-  height: 60px
-  align-items: center
-  justify-content: center
-  user-select: none
-  transition: $transition
-  p
-    color: #bdbdbd
-  &:hover
-    background-color: #d6d6d6
-    p
-      transition: $transition
-      color: #828282
-
-
-.hero
-  height: 75vh
-  background-image: url("https://bit.ly/3hkcMFO")
-  opacity: 85%
-  background-position: center center
-  background-repeat: no-repeat
-  background-size: cover
-  @include flex
-  justify-content: center
-  align-items: center
-  transition: $transition
-
-  .midtext p
-    font-size: 40px
-    color: white
-    font-family: 'Open Sans'
-    font-weight: 100
-    text-shadow: 3px 3px 8px #4c4c4c
-    letter-spacing: 5px
-    font-weight: 300
-    &:nth-child(2)
-      font-size: 16px
-      text-align: center
-      font-weight: 100!important
-
-.about
-  @include flex
-  min-height: 100vh
-  justify-content: center
-  flex-direction: column
-  align-items: center
-  max-width: 1000px
-  margin: auto
-  //justify-content: center
+@import ./sass/product
 
 .content-box
   @include flex
@@ -158,18 +78,6 @@ $mbutton: inherit
   flex: 3
   margin: 40px 0px
 
-.abouttext
-  width: 100%
-  @include flex
-  align-items: center
-  justify-content: center
-  height: 130px
-  p
-    text-align: center
-    margin: 0px 45px
-    text-decoration: none
-    user-select: none
-
 .section
   width: 100%
   @include flex
@@ -193,181 +101,15 @@ $mbutton: inherit
 .s-large
   height: 600px
 
-.card
-  @include flex
-  justify-content: center
-
-.cardbox
-  @include flex
-  flex-direction: column
-  width: 320px
-  align-items: center
-  justify-content: center
-
-.profile
-  @include flex
-  height: 200px
-  justify-content: center
-  align-items: center
-  width: 100%
-
-$profilepic: 150px
-
-.profilepic
-  width: $profilepic
-  height: $profilepic
-  border-radius: 50%
-  &.reece
-    background-image: url("https://bit.ly/3haWaR6")
-    background-size: 400px
-    background-position: -150px 0px
-    background-repeat: no-repeat
-  &.bash
-    background-image: url("https://bit.ly/2FWvBkL")
-    background-position: -20px 0px
-    background-size: 180px
-    background-repeat: no-repeat
-
-.profilename
-  @include flex
-  height: 40px
-  width: 100%
-  align-items: center
-  justify-content: center
-  p
-    font-size: 20px
-
-.profiletext
-  @include flex
-  justify-content: center
-  width: 100%
-  //height: 200px
-  p
-    margin-top: 12px
-    text-align: center
-
-.product
-  @include flex
-  height: 100vh
-  flex-direction: column
-  align-items: center
-
-.p-holder
-  height: 80%
-  display: flex
-  justify-content: center
-  width: 100%
-
-.price-box
-  display: flex
-  flex: 1
-  flex-direction: column
-  align-items: center
-  height: 80%  
-
-.pb-icon
-  width: 150px
-  height: 250px
-
 
 //screen size desktop
-
 @media screen and (min-width: 960px)
-  .header
-    height: 60px
-    transition: $transition
-
-  .title p
-    font-size: 23px
-    transition: $transition
-
-  .menu
-    transition: $transition
-    .menubutton
-      width: auto
-      height: $mbutton
-      img
-        width: auto
-        height: $mbutton
-
-  .hero
-    height: 92vh
-    transition: $transition
-
+  @import ./sass/widescreen
 
 //tablet size
-
 @media screen and (max-width: 670px)
-  .menubutton
-    @include flex
-
-  .mbutton
-    display: none!important
-  .header
-    height: 60px
-    transition: $transition
-
-  .title p
-    font-size: 20px
-    padding: 16px
-    transition: $transition
-
-  .menu
-    width: 60px!important
-    height: 60px!important
-    transition: $transition
-    .menubutton
-      width: auto
-      height: $mbutton
-      img
-        width: auto
-        height: $mbutton
-
-  .hero
-    height: 50vh
-    transition: $transition
-    .midtext p
-      font-size: 30px
-      &:nth-child(2)
-        font-size: 14px
-
-  .subtitle p
-    font-size: 20px
-
-  .abouttext
-
-    p
-      font-size: 15px
+  @import ./sass/tablet
 
 // phone size
 @media screen and (max-width: 550px)
-  .header
-    height: 50px
-    transition: $transition
-
-  .title p
-    font-size: 16px
-    padding: 14px
-    padding-right: 8px
-    letter-spacing: 6px
-    transition: $transition
-
-  .menu
-    width: 50px!important
-    height: 50px!important
-    transition: $transition
-    .menubutton
-      width: auto
-      height: $mbutton
-      img
-        width: auto
-        height: $mbutton
-
-  .hero
-    height: 40vh
-    transition: $transition
-    .midtext p
-      font-size: 26px
-      text-align: center
-      &:nth-child(2)
-        font-size: 12px
+  @import ./sass/mobile

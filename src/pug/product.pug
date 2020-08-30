@@ -2,9 +2,18 @@
 .product
   .subtitle
     p Pricing
+  .abouttext.p-text
+    p All options  
   .p-holder
-    - const basic = {icon: '', title: 'basic running', price: '£80', description: 'One off running program. On day program: Pace, distance terrain and contact with the coach'}
-    +price(basic)
-    +price(basic)
-    +price(basic)
-    +price(basic)
+    .ph-container
+      //vars
+      - const basic = {icon: 'basic', title: 'basic running', price: '£80', description: 'One off running program. On day program: Pace, distance terrain and contact with the coach.'}
+      - const running = {icon: 'running', title: 'advance running', price: '£120', description: 'Runs to do each week: Pace, distance, terrain and train with the coach daily.'}      
+      - const strength = {icon: 'strength', title: 'Strength Program', price: '£150', description: 'Identify any strengths and weaknesses, along with the basic running program.'}
+      - const nutrition = {icon: 'diet', title: 'Nutrition program ', price: '£200', description: 'To help improve your overall well being whilst achieving your goals in running alongside the strength and basic running programs.'}
+      
+      //price cards 
+      +price(basic)
+      +price(running)
+      +price(strength)
+      +price(nutrition)

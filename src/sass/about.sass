@@ -1,0 +1,81 @@
+//main:../style.sass
+.about
+  @include flex
+  min-height: 100vh
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  max-width: 1000px
+  margin: auto
+  .section
+    min-height: 400px
+    flex-wrap: wrap
+
+.abouttext
+  width: 100%
+  @include flex
+  align-items: center
+  justify-content: center
+  min-height: 130px
+  p
+    text-align: center
+    margin: 15px 45px
+    text-decoration: none
+    user-select: none
+    letter-spacing: 0.5px
+
+.card
+  @include flex
+  justify-content: center
+  padding-bottom: 20px
+
+.cardbox
+  @include flex
+  flex-direction: column
+  width: 320px
+  align-items: center
+  justify-content: center
+  user-select: none
+
+.profile
+  @include flex
+  height: 200px
+  justify-content: center
+  align-items: center
+  width: 100%
+
+$profilepic: 150px
+
+.profilepic
+  width: $profilepic
+  height: $profilepic
+  border-radius: 50%
+  &.reece
+    background-image: url("https://bit.ly/3haWaR6")
+    background-size: 400px
+    background-position: -150px 0px
+    background-repeat: no-repeat
+  &.bash
+    background-image: url("https://bit.ly/2FWvBkL")
+    background-position: -20px 0px
+    background-size: 180px
+    background-repeat: no-repeat
+
+.profilename
+  @include flex
+  height: 40px
+  width: 100%
+  align-items: center
+  justify-content: center
+  p
+    font-size: 20px
+
+.profiletext
+  @include flex
+  justify-content: center
+  width: 100%
+  //height: 200px
+  p
+    margin-top: 12px
+    text-align: center
+    color: grey

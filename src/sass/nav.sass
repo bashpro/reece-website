@@ -1,0 +1,52 @@
+//main:../style.sass
+.header
+  height: 60px
+  @include flex
+  transition: $transition
+
+.title
+  flex: 1
+  @include flex
+  align-items: center
+  //justify-content: center
+  p
+    font-size: 20px
+    letter-spacing: 5px
+    padding-left: 10px
+    user-select: none
+    font-family: 'Open Sans'
+    transition: all 0.2s ease
+
+.menu
+  width: 300px!important
+  height: 60px
+  transition: $transition
+  @include flex
+  .menubutton
+    display: none
+    width: auto
+    height: $mbutton
+    img
+      width: auto
+      height: $mbutton
+
+.mbutton
+  @include flex
+  height: 60px
+  width: inherit
+
+.mb
+  @include flex
+  flex: 1
+  height: 60px
+  align-items: center
+  justify-content: center
+  user-select: none
+  transition: $transition
+  p
+    color: #bdbdbd
+  &:hover
+    background-color: #d6d6d6
+    p
+      transition: $transition
+      color: #828282

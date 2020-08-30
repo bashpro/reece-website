@@ -1,0 +1,42 @@
+//main:../style.sass
+.menubutton
+  @include flex
+
+.mbutton
+  display: none!important
+.header
+  height: 60px
+  transition: $transition
+
+.title p
+  font-size: 20px
+  padding: 16px
+  transition: $transition
+
+.menu
+  width: 60px!important
+  height: 60px!important
+  transition: $transition
+  .menubutton
+    display: block
+    width: auto
+    height: $mbutton
+    img
+      width: auto
+      height: $mbutton
+
+.hero
+  height: 50vh
+  transition: $transition
+  .midtext p
+    font-size: 30px
+    &:nth-child(2)
+      font-size: 14px
+
+.subtitle p
+  font-size: 20px
+
+.abouttext
+
+  p
+    font-size: 15px

@@ -1,0 +1,25 @@
+//main:../style.sass
+.hero
+  height: 75vh
+  background-image: url("https://bit.ly/3hkcMFO")
+  opacity: 85%
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  @include flex
+  justify-content: center
+  align-items: center
+  transition: $transition
+
+  .midtext p
+    font-size: 40px
+    color: white
+    font-family: 'Open Sans'
+    font-weight: 100
+    text-shadow: 3px 3px 8px #4c4c4c
+    letter-spacing: 5px
+    font-weight: 300
+    &:nth-child(2)
+      font-size: 16px
+      text-align: center
+      font-weight: 100!important
