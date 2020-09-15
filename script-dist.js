@@ -1,0 +1,1 @@
+$(document).ready((function(){console.log("haaaiiii im totally working")}));var hai="haaaiiii im totally working";console.log(hai);

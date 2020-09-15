@@ -1,0 +1,40 @@
+//main:../style.sass
+.contact
+  @include flex
+  min-height: 120px
+  flex-wrap: wrap
+
+.c-box
+  flex: 1
+  min-width: 300px
+  min-height: 50px
+  @include flex
+  @include flex-center
+  p
+    user-select: none
+
+.cb-icons
+  @include flex
+
+.icons
+  width: 50px
+  height: 50px
+  margin: 10px
+  border-radius: 50%
+  background-color: #e6e6e6
+  background-size: 35px
+  background-repeat: no-repeat
+  background-position: center
+  filter: opacity(0.3)
+  transition: $transition
+  cursor: default
+  a
+    width: 50px
+    height: 50px
+
+  &:hover
+    filter: opacity(0.6)
+  &#insta
+    background-image: url("https://bit.ly/3iwSREB")
+  &#mail
+    background-image: url("https://bit.ly/32wWfd1")

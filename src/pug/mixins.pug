@@ -11,7 +11,22 @@ mixin cards(i)
         #{i.description}
         
 mixin price(i)
-  .price-box
+  .price-box2.hidden(data-card= i.data id= i.id)
+    .pb-card2
+      .pb-iconholder
+        .pb-icon(id= i.icon) 
+      .pb-title
+        p.
+          #{i.title}
+      .pb-price
+        p.
+          #{i.price}
+      .pb-description
+        p.
+          #{i.description}
+          
+mixin prices(i)
+  .price-box(data-card= i.data)
     .pb-card 
       .pb-iconholder
         .pb-icon(id= i.icon) 
@@ -24,4 +39,10 @@ mixin price(i)
       .pb-description
         p.
           #{i.description}
-    
+          
+mixin info(i)
+  .pid-box.hidden(id= i.id)
+    .pid-text
+      p.
+        #{i.text}
+      p If you'd like to join a program thats available, please click the google link below!

@@ -1,19 +1,60 @@
 // main: ../index.pug
-.product
-  .subtitle
+.productinfo.hide
+  .pi-box
+    .pi-close
+      .pi-closebtn
+    .pi-cardholder
+      .pi-card
+        .pi-button-hld
+          .pi-button#piback
+        .pic-holder
+          
+          //vars
+          - const basic1 = {data: '01', id: 'card01', icon: 'basic', title: 'basic running', price: '£80', description: 'Lets run together!'}
+          - const running1 = {data: '02', id: 'card02',  icon: 'running', title: 'advance running', price: '£120', description: 'Wanna race?'}      
+          - const strength1 = {data: '03', id: 'card03',  icon: 'strength', title: 'Strength Program', price: '£150', description: 'Your getting stronger, keep it up!'}
+          - const nutrition1 = {data: '04',  id: 'card04', icon: 'diet', title: 'Nutrition program ', price: '£200', description: 'Good food choice, keep yourself healthy!'}
+          
+          //price cards 
+          +price(basic1)
+          +price(running1)
+          +price(strength1)
+          +price(nutrition1)
+          
+        .pi-button-hld
+          .pi-button#pifront   
+      .pi-description
+        .pi-descbox
+          //vars
+          - const basicinfo = {id: 'info01', text: 'One off program giving you an insight/basic program of either getting fit and eventually having dreams of being faster.'}
+          - const runninginfo = {id: 'info02', text: 'Similar to basic program we offer daily contact with coach, giving you advice on pacing through terrain or long distances!'}
+          - const strengthinfo = {id: 'info03', text: 'Strength program is designed to train all aspects of your body through intense training tailored to suit your level from the coach, with daily contact for advice!'}
+          - const nutritioninfo = {id: 'info04', text: 'Nutrition combines all programs to help your overall well being. A structure for your diet will be put in place. Hopefully giving you the oppurtunity to reach your fitness goals!!!'}
+          
+          +info(basicinfo)
+          +info(runninginfo)
+          +info(strengthinfo)
+          +info(nutritioninfo) 
+        
+          .pid-box.btnactive 
+            .pid-btn
+              a(href="https://forms.gle/qLbEgw4dxAwZKQ8w7", target="_blank") Google Forms
+
+.product#02
+  .subtitle.a-text
     p Pricing
   .abouttext.p-text
-    p All options  
+    p All programs prices are monthly, select a program to find out more!
   .p-holder
     .ph-container
       //vars
-      - const basic = {icon: 'basic', title: 'basic running', price: '£80', description: 'One off running program. On day program: Pace, distance terrain and contact with the coach.'}
-      - const running = {icon: 'running', title: 'advance running', price: '£120', description: 'Runs to do each week: Pace, distance, terrain and train with the coach daily.'}      
-      - const strength = {icon: 'strength', title: 'Strength Program', price: '£150', description: 'Identify any strengths and weaknesses, along with the basic running program.'}
-      - const nutrition = {icon: 'diet', title: 'Nutrition program ', price: '£200', description: 'To help improve your overall well being whilst achieving your goals in running alongside the strength and basic running programs.'}
+      - const basic = {data: '01', icon: 'basic', title: 'basic running', price: '£80', description: 'Lets run together!'}
+      - const running = {data: '02',  icon: 'running', title: 'advance running', price: '£120', description: 'Wanna race?'}      
+      - const strength = {data: '03',  icon: 'strength', title: 'Strength Program', price: '£150', description: 'Your getting stronger, keep it up!'}
+      - const nutrition = {data: '04',  icon: 'diet', title: 'Nutrition program ', price: '£200', description: 'Good food choice, keep yourself healthy!'}
       
       //price cards 
-      +price(basic)
-      +price(running)
-      +price(strength)
-      +price(nutrition)
+      +prices(basic)
+      +prices(running)
+      +prices(strength)
+      +prices(nutrition)

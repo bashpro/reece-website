@@ -3,7 +3,24 @@
   @include flex
 
 .mbutton
-  display: none!important
+  display: contents
+  height: 0px
+  position: fixed
+  left: 0px
+  top: 50px
+  width: 100%
+  opacity: 0
+  transition: $transition
+  flex-direction: column
+  &.active
+    height: 250px
+    display: flex
+    z-index: 10
+    opacity: 1!important
+    background-color: white
+    display: flex
+
+
 .header
   height: 60px
   transition: $transition
@@ -40,3 +57,7 @@
 
   p
     font-size: 15px
+    margin: 15px
+
+.pi-description
+  height: calc(100% - 380px)

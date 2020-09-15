@@ -1,8 +1,17 @@
 //main:../style.sass
 .header
   height: 60px
+  width: 100%
   @include flex
   transition: $transition
+  position: fixed
+  z-index: 2
+  background: white
+  transition: all 1.2s ease
+
+.p-colour
+  background-color: whitesmoke!important
+
 
 .title
   flex: 1

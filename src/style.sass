@@ -36,6 +36,10 @@ $mbutton: inherit
 @mixin flex
   display: flex
 
+@mixin flex-center
+  justify-content: center
+  align-items: center
+
 // build css (tablet size)
 
 .container
@@ -51,6 +55,8 @@ $mbutton: inherit
 @import ./sass/about
 
 @import ./sass/product
+
+@import ./sass/contact
 
 .content-box
   @include flex
